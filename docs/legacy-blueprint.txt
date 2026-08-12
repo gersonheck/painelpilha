@@ -1,0 +1,44 @@
+{
+  "repository": "pilha-plus-blueprint",
+  "file_count": 37,
+  "root": "output/pilha-plus-blueprint",
+  "modules": {
+    "onboarding": [
+      "src/features/onboarding/components/OnboardingFlow.jsx",
+      "src/features/onboarding/services/completeOnboarding.js"
+    ],
+    "profile": [
+      "src/features/profile/components/ProfileScreen.jsx",
+      "src/features/profile/services/profileService.js"
+    ],
+    "measurement": [
+      "src/features/measurement/ppg/PPGEngine.js",
+      "src/features/measurement/ppg/PPGCapture.jsx",
+      "src/features/measurement/ppg/services/saveMeasurement.js"
+    ],
+    "storage": [
+      "src/shared/storage/SafeStorage.js",
+      "src/shared/storage/storageKeys.js",
+      "src/shared/storage/collaboratorStorage.js",
+      "src/shared/storage/retention.js"
+    ],
+    "contracts": [
+      "src/shared/contracts/profile.js",
+      "src/shared/contracts/contextTrace.js",
+      "src/shared/contracts/measurement.js",
+      "src/shared/contracts/session.js"
+    ],
+    "tests": [
+      "tests/onboarding/completeOnboarding.test.js",
+      "tests/storage/retention.test.js",
+      "tests/storage/collaboratorIsolation.test.js"
+    ]
+  }
+}
+cd output/pilha-plus-blueprint
+git init
+git branch -M main
+git add .
+git commit -m "chore: bootstrap Pilha+ app blueprint"
+git remote add origin <URL_DO_SEU_REPOSITORIO>
+git push -u origin main
